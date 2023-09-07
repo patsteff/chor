@@ -1,15 +1,15 @@
 <template >
     <div>
         <div v-for="post in posts" :key="'post.id'">
-            <h3>{{ post.title }}</h3>
+            <Post :post="post" />
         </div>
     </div>
 </template>
 <script setup>
-import { defineProps } from 'vue'
-
+import Post from './Post.vue'
 const props = defineProps({
     posts: Array
 })
+console.log(props.posts);
 </script>
 <style ></style>
